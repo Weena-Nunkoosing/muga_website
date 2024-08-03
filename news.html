@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - MUGA Community Center</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #D2BD96;
+            color: #fff;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            margin-left: 20px;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #444;
+        }
+        
+        nav ul li {
+            margin: 0;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: -11.11%;
+        }
+
+        .menu-toggle span {
+            background: #fff;
+            height: 3px;
+            margin: 5px 0;
+            width: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+            }
+
+            nav ul.showing {
+                display: flex;
+            }
+        }
+        
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .news-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-item img {
+            max-width: 50%;
+            border-radius: 8px;
+        }
+
+        .news-item h3 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+
+        .news-item p {
+            margin: 10px 0 0;
+        }
+
+        .news-item button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .news-item button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #D2BD96;
+            color: #030303;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="navbar-brand">
+            <img src="https://www.muga.mu/assets/img/that02.png" alt="MUGA Logo">
+        </a>
+    
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="news-section">
+            <h2>News</h2>
+            <div class="news-item">
+                <img src="./dance.jpg" alt="News Image 1">
+                <h3>Zumba event</h3>
+                <p> Get ready to dance, sweat, and have fun while boosting your fitness levels. This energetic session is perfect for all ages and fitness levels..</p>
+                
+            </div>
+            <div class="news-item">
+                <img src="./senior.jpg" alt="News Image 2">
+                <h3>New Sports Facilities for Senior Citizens Now Open </h3>
+                <p>Exciting News! Enjoy the game of dominoes in our newly established, state-of-the-art sports facilities designed especially for senior citizens</p>
+             
+            </div>
+            <div class="news-item">
+                <img src="./competition.jpg" alt="News Image 3">
+                <h3>Futsal competition</h3>
+                <p>Thrilling Futsal Competition Ignites Local Passion! With fierce matches and exciting plays, the event was a fantastic display of sportsmanship and talent.</p>
+                
+            </div>
+            <div class="news-item">
+                <img src="./ministry.jpg" alt="News Image 4">
+                <h3>Ministry of sports</h3>
+                <p>The Ministry of Sports has allocated awards to recognize the outstanding achievements and dedication of participants in recent events. </p>
+              
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MUGA Community Center. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            var navList = document.getElementById('nav-list');
+            navList.classList.toggle('showing');
+        });
+    </script>
+</body>
+</html>

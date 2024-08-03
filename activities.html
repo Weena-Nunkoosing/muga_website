@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - MUGA Community Center</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #D2BD96;
+            color: #fff;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            margin-left: 20px;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #444;
+        }
+        
+        nav ul li {
+            margin: 0;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: -11.11%;
+        }
+
+        .menu-toggle span {
+            background: #fff;
+            height: 3px;
+            margin: 5px 0;
+            width: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+            }
+
+            nav ul.showing {
+                display: flex;
+            }
+        }
+        
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        
+        .achievements-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            transition: transform 0.3s;
+            text-align: center; /* Center-align the content within the box */
+        }
+        
+        .achievements-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .achievements-box img, .achievements-box video {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .achievements-box h3 {
+            margin-top: 10px;
+            color: #007BFF;
+        }
+        
+        .achievements-box p {
+            margin: 10px 0 0;
+        }
+        
+        footer {
+            background-color: #D2BD96;
+            color: #030303;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .slick-prev, .slick-next {
+            background-color: #fff;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #444;
+            z-index: 2;
+        }
+
+        .slick-prev:hover, .slick-next:hover {
+            background-color: #ddd;
+        }
+
+        .slick-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .slick-dots li button:before {
+            color: #444;
+            font-size: 12px;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #007BFF;
+        }
+
+        .facility-wrapper {
+            text-align: center;
+        }
+
+        .facility-wrapper img {
+            margin: 0 auto;
+        }
+
+        .facility-wrapper h3 {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="navbar-brand">
+            <img src="https://www.muga.mu/assets/img/that02.png" alt="MUGA Logo">
+        </a>
+        
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Facilities Section -->
+        <section class="g-pt-50 g-pb-50" style="background-color: #fff!important;">    
+            <div class="container">
+                <h2 class="h1 g-color-black text-center g-font-weight-600 g-mb-15">
+                    <span class="g-color-black">Facilities <font class="g-color-primary">you</font> can enjoy</span>
+                </h2>
+                <h2 class="h5 g-color-black text-center g-font-weight-300 g-mb-60">
+                    <span class="g-color-black">A range of amenities accessible free of charge</span>
+                </h2>
+
+                <div class="shortcode-html">
+                    <div class="u-bg-overlay__inner">
+                        <div id="carousel-facilities" class="js-carousel text-center" data-infinite="1" data-center-mode="0" data-center-padding="10px" data-slides-show="3" data-rows="2" data-arrows-classes="u-arrow-v1 g-absolute-centered--y g-width-35 g-height-40 g-font-size-18 g-color-gray g-bg-white" data-arrow-left-classes="fa fa-angle-left g-left-0" data-arrow-right-classes="fa fa-angle-right g-right-0">
+                            <div class="facility-wrapper">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="https://www.muga.mu/assets/img/futsal-300x250.jpg" alt="Futsal">
+                                <h3 class="g-color-white h5 g-bg-black-opacity-0_7 g-pa-20-30--sm">Futsal</h3>
+                            </div>
+                            <div class="facility-wrapper">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="https://www.muga.mu/assets/img/outdoor-gym.jpg" alt="Outdoor Gym">
+                                <h3 class="g-color-white h5 g-bg-black-opacity-0_7 g-pa-20-30--sm">Outdoor Gym</h3>
+                            </div>
+                            <div class="facility-wrapper">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="https://www.muga.mu/assets/img/zumba-300x250.jpg" alt="Zumba &amp; Yoga Sessions">
+                                <h3 class="g-color-white h5 g-bg-black-opacity-0_7 g-pa-20-30--sm">Zumba &amp; Yoga Sessions</h3>
+                            </div>
+                            <div class="facility-wrapper">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="https://www.muga.mu/assets/img/running-track-300x250.jpg" alt="Running Track">
+                                <h3 class="g-color-white h5 g-bg-black-opacity-0_7 g-pa-20-30--sm">Running Track</h3>
+                            </div>
+                            <div class="facility-wrapper">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="https://www.muga.mu/assets/img/kids.jpg" alt="Kids Area">
+                                <h3 class="g-color-white h5 g-bg-black-opacity-0_7 g-pa-20-30--sm">Kids Area</h3>
+                            </div>
+                            <div class="facility-wrapper">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="https://www.muga.mu/assets/img/boulodrome-300x250.jpg" alt="Pétanque">
+                                <h3 class="g-color-white h5 g-bg-black-opacity-0_7 g-pa-20-30--sm">Pétanque</h3>
+                            </div>
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MUGA Community Center. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#carousel-facilities').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            $('#mobile-menu').on('click', function() {
+                $('nav ul').toggleClass('showing');
+            });
+        });
+    </script>
+</body>
+</html>
